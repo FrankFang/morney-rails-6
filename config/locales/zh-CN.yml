@@ -7,6 +7,7 @@ zh-CN:
             email:
               blank: 请填写邮箱
               invalid: 邮箱格式错误
+              not_found: 该邮箱没有注册
             password:
               blank: 请填写密码
               too_short: 密码不能少于 6 个字符
