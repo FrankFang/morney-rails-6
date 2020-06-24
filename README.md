@@ -2,8 +2,9 @@
 
 ## 下载代码
 
+请先使用 git clone 下载本代码，然后运行
+
 ```bash
-git clone git@github.com:FrankFang/morney-rails-1.git
 cd morney-rails-1
 bundle install
 bundle exec rake app:update:bin
