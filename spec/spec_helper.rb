@@ -1,3 +1,15 @@
+require 'rspec_api_documentation'
+require 'api_documentation_helper'
+RspecApiDocumentation.configure do |config|
+  config.request_headers_to_include = %w(Content-Type Cookie)
+  config.response_headers_to_include = %w(Content-Type Set-Cookie)
+  config.request_body_formatter = :json
+  config.api_name = "旺财API文档"
+  config.api_explanation = %q{
+    请求数据格式：默认使用JSON格式，但也支持 application/x-www-form-urlencoded 格式。
+    状态码：200表示成功，400表示失败，422表示表单数据校验不通过，其他状态码请查阅维基百科。
+  }
+end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 module SpecTestHelper
   def sign_in(email, password)
