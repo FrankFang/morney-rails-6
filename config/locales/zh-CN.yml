@@ -25,5 +25,5 @@ zh-CN:
               blank: 邮箱不能为空
               invalid: 邮箱必须还有 @ 字符
             password_confirmation:
-              blank: 请添加确认密码
+              blank: 请填写确认密码
               confirmation: 两次密码不匹配
