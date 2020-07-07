@@ -61,3 +61,10 @@ bin/rails s
 bin/rake docs:generate
 start doc/api/index.html 或者 open doc/api/index.html
 ```
+
+## 运行一个测试 
+
+```bash
+bin/rspec -e 'should create a record'
+```
+
