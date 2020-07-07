@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Users API</title>
+    <title>Records API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Users API</h1>
+      <h1>Records API</h1>
 
       <div class="article">
-        <h2>创建用户（注册）</h2>
-        <h3>POST /users</h3>
+        <h2>create a record</h2>
+        <h3>POST /records</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -123,26 +123,26 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
-                    <span class="name">email</span>
+                    <span class="name">amount</span>
                 </td>
                 <td>
-                  <span class="description">邮箱</span>
+                  <span class="description">金额</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">password</span>
+                    <span class="name">category</span>
                 </td>
                 <td>
-                  <span class="description">密码</span>
+                  <span class="description">类型:1 outgoings|2 income</span>
                 </td>
               </tr>
               <tr>
-                <td class="required">
-                    <span class="name">password_confirmation</span>
+                <td>
+                    <span class="name">notes</span>
                 </td>
                 <td>
-                  <span class="description">确认密码</span>
+                  <span class="description">备注</span>
                 </td>
               </tr>
             </tbody>
@@ -156,11 +156,11 @@ table th, table td {
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /users</pre>
+          <pre class="request route highlight">POST /records</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"email":"1@qq.com","password":"123456","password_confirmation":"123456"}</pre>
+            <pre class="request body">{"amount":10000,"category":"income","notes":"彩票中奖"}</pre>
 
 
             <h3>Response</h3>
@@ -171,11 +171,12 @@ Cookie: </pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;resource&quot;: {
-    &quot;id&quot;: 93,
-    &quot;email&quot;: &quot;1@qq.com&quot;,
-    &quot;password_digest&quot;: &quot;$2a$04$KVUTKO6.jJ9O992aNYV79eFAdohGdAT6aJ9ZCvp/9mfNuvHbX9.tK&quot;,
-    &quot;created_at&quot;: &quot;2020-07-07T20:48:44.250Z&quot;,
-    &quot;updated_at&quot;: &quot;2020-07-07T20:48:44.250Z&quot;
+    &quot;id&quot;: 10,
+    &quot;amount&quot;: 10000,
+    &quot;category&quot;: &quot;income&quot;,
+    &quot;notes&quot;: &quot;彩票中奖&quot;,
+    &quot;created_at&quot;: &quot;2020-07-07T20:48:43.756Z&quot;,
+    &quot;updated_at&quot;: &quot;2020-07-07T20:48:43.756Z&quot;
   }
 }</pre>
       </div>
