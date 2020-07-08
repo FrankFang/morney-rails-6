@@ -71,4 +71,20 @@ RSpec.describe "Record", type: :request do
       expect(response.status).to eq 404
     end
   end
+
+  context 'update' do
+    it 'should not update a record before sign in' do
+      record = Record.create! amount: 10000, category: 'income'
+      patch "/records/#{record.id}", params: {amount: 9900}
+      expect(response.status).to eq 401
+    end
+    it 'should update a record' do
+      sign_in
+      record = Record.create! amount: 10000, category: 'income'
+      patch "/records/#{record.id}", params: {amount: 9900}
+      expect(response.status).to eq 200
+      body = JSON.parse response.body
+      expect(body['resource']['amount']).to eq 9900
+    end
+  end
 end
