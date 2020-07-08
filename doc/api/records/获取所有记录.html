@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Records API</title>
+    <meta charset="utf-8">
+    <style>
+      
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+td.required .name:after {
+  float: right;
+  content: "required";
+  font-weight: normal;
+  color: #F08080;
+}
+
+a{
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #404040;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+h3{
+  font-size: 18px;
+  line-height: 36px;
+}
+h4 {
+  font-size: 16px;
+  line-height: 36px;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  font-size: 13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+}
+
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+table th+th, table td+td {
+  border-left: 1px solid #ddd;
+}
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Records API</h1>
+
+      <div class="article">
+        <h2>获取所有记录</h2>
+        <h3>GET /records</h3>
+
+          <h3>Parameters</h3>
+          <table class="parameters table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <span class="name">page</span>
+                </td>
+                <td>
+                  <span class="description">页码</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <h3>Request</h3>
+
+            <h4>Headers</h4>
+            <pre class="request headers">Content-Type: application/json
+Cookie: _morney_session_id=%2FyLir4yNgqpPL29TRSfjSZ78GAhme8eJ9j4lYDBBlcp3eu6n1AcX0y7GkB9LRKFMPzWdAY3SIC9nUKf1cZ8nwDiBcc1M80QvImfcXP92z2oaJ%2B3VKvQMdV6JPC6F2I31BXg72z%2Bd9GsMidAYkiwCCyaox6GM65Y8NtCOzgw8UkFRy5cixzDHfwcwcYzgyz9Fm8RcAqyXrzAza0GG%2FMHf%2FycT1zZDwGA%2B87Ag%2Fmgf81x%2Berh%2Fx3cfCr4u--CQ1dgTAJ6jEAtJnf--p2oEQR8kEKM3WQywb2G10Q%3D%3D</pre>
+
+          <h4>Route</h4>
+          <pre class="request route highlight">GET /records?page=1</pre>
+
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">page: 1</pre>
+
+
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">Content-Type: application/json; charset=utf-8
+Set-Cookie: _morney_session_id=0gHrGR2rX48ejlZ0x2mf%2FdXVNuSMYEOzIdzjk2jlFTUMg9S1QuWJIn7SXwkCqHogOhFbVohARazoJPx7oSC5G0l9jxgdDoOaoYAQGKQaN706S3slf%2BP1VEXlgU%2BVhre3gDijjpisfONtFHz3W7WXLPS1GR5pMQyNA7IZCL0dgokPilN7twfT3wKS5IOvbu%2FVG3TSufGvijwWJ1WZLvCctJmOUeGDCsF8Okq8NJYrJ3gsCOYTQNrbOnwT--ogezXFMRwT7nsfQR--%2BORyv4gH1ksbG2nu9ruPxw%3D%3D; path=/; HttpOnly</pre>
+            <h4>Status</h4>
+            <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;resources&quot;: [
+    {
+      &quot;id&quot;: 122,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.782Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.782Z&quot;
+    },
+    {
+      &quot;id&quot;: 123,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.785Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.785Z&quot;
+    },
+    {
+      &quot;id&quot;: 124,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.786Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.786Z&quot;
+    },
+    {
+      &quot;id&quot;: 125,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.788Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.788Z&quot;
+    },
+    {
+      &quot;id&quot;: 126,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.790Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.790Z&quot;
+    },
+    {
+      &quot;id&quot;: 127,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.791Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.791Z&quot;
+    },
+    {
+      &quot;id&quot;: 128,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.792Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.792Z&quot;
+    },
+    {
+      &quot;id&quot;: 129,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.794Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.794Z&quot;
+    },
+    {
+      &quot;id&quot;: 130,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.795Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.795Z&quot;
+    },
+    {
+      &quot;id&quot;: 131,
+      &quot;amount&quot;: 10000,
+      &quot;category&quot;: &quot;income&quot;,
+      &quot;notes&quot;: null,
+      &quot;created_at&quot;: &quot;2020-07-08T09:24:16.797Z&quot;,
+      &quot;updated_at&quot;: &quot;2020-07-08T09:24:16.797Z&quot;
+    }
+  ]
+}</pre>
+      </div>
+    </div>
+  </body>
+</html>
