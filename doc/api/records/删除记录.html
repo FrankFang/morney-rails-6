@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Users API</title>
+    <title>Records API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,78 +106,32 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Users API</h1>
+      <h1>Records API</h1>
 
       <div class="article">
-        <h2>创建用户（注册）</h2>
-        <h3>POST /users</h3>
+        <h2>删除记录</h2>
+        <h3>DELETE /records/:id</h3>
 
-          <h3>Parameters</h3>
-          <table class="parameters table table-striped table-bordered table-condensed">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="required">
-                    <span class="name">email</span>
-                </td>
-                <td>
-                  <span class="description">邮箱</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">password</span>
-                </td>
-                <td>
-                  <span class="description">密码</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">password_confirmation</span>
-                </td>
-                <td>
-                  <span class="description">确认密码</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
 
           <h3>Request</h3>
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
-Cookie: </pre>
+Cookie: _morney_session_id=gMTno0Q5SXd4oEjy%2Beq499Peqex%2FKUroiTdmdnKXqeWAY1nNNrH1QRVpUq9idfDdAKbPzGeqXNpAMdJH7%2B2YOVjmNJOjqVjeG0RntmnX6YpXjlsE85r7b6qCD2RwAd00Lcx2VMwO5HeW8mRKxfowzbsdAq4u6Dixm6ImH7q97ErL9ioDJe%2BHPLXoPkbDztM41VbCqPU%2BKm%2BKLVBeGfVW0y8zwmwA5yznafHwTVm%2BMQ0hnYsMSfNyhsmS--qOW6Bm0Q%2Fp4reGs2--C4NvDtc8HD4iJZfYtQT1Mw%3D%3D</pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /users</pre>
+          <pre class="request route highlight">DELETE /records/61</pre>
 
 
-            <h4>Body</h4>
-            <pre class="request body">{"email":"1@qq.com","password":"123456","password_confirmation":"123456"}</pre>
 
 
             <h3>Response</h3>
               <h4>Headers</h4>
-              <pre class="response headers">Content-Type: application/json; charset=utf-8</pre>
+              <pre class="response headers">Content-Type: application/json
+Set-Cookie: _morney_session_id=bMJG243HY5JWTmy7IUDpIPwJwF32b1DM7uf%2FpW1N%2Fbkdn2sTQNFYrTgiCYvHVauS6h2inihB2%2BBO2J8FLT4qr4JkNuYWEqBXmFJG%2BV6LvLPRKQ0c7suM8t86xJKemkHVp8gP4vQPX42sURFQ5h0ceUVCz2sMTHUSI959ufxVgQMGNRG2Tf384Bptp9eRQjDKeDzxiaw9Xa3wNSQcMSBPcdmg26fbSLxdUG%2FnC3UOcQeznuQ7VEM%2Bdirs--1auLurSUcbqoEIcf--mq0eak0DBLkKScc5tC9%2FcQ%3D%3D; path=/; HttpOnly</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
-              <h4>Body</h4>
-              <pre class="response body">{
-  &quot;resource&quot;: {
-    &quot;id&quot;: 381,
-    &quot;email&quot;: &quot;1@qq.com&quot;,
-    &quot;password_digest&quot;: &quot;$2a$04$35avo0lY44FNPa9EdAqnt.xpaO3qaKAbNhGYxcSzQqDA3bIH/w6dS&quot;,
-    &quot;created_at&quot;: &quot;2020-07-08T08:54:52.697Z&quot;,
-    &quot;updated_at&quot;: &quot;2020-07-08T08:54:52.697Z&quot;
-  }
-}</pre>
       </div>
     </div>
   </body>
