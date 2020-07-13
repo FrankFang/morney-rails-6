@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Records API</title>
+    <title>Tags API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Records API</h1>
+      <h1>Tags API</h1>
 
       <div class="article">
-        <h2>获取一个记录</h2>
-        <h3>GET /records/:id</h3>
+        <h2>获取一个标签</h2>
+        <h3>GET /tags/:id</h3>
 
 
 
@@ -118,10 +118,10 @@ table th, table td {
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
-Cookie: _morney_session_id=BSiZgNrsSIUtT4WgjfUVIyIXc6kl%2BEeXkuOazu5iIoPibECYY9QMq%2FuEA4tJNV6uatislm0JCcHjXmasbhYim6g7SyOjPMMhJm0fq7ARJ3VfZJY1x6P7RwT0u%2BTnQ4mZ3KCFn81EodyYRIkh05BEWaTvXjayrRVRWz1qLoStiHvtILqh3cKm97F7JRc1QQ8gHyNR9LHGnNPGC3phtI2lUM6h2C5xJG7eZqGLQWVUan51OhBE2rvuXhMW--D0T3ui8DUawasq7%2F--3FiHDpAT2rUjaIkxWf1HJQ%3D%3D</pre>
+Cookie: _morney_session_id=JpdmY6EtcxPzfWaqRje1vKiy11Dk%2FDda01uP%2FD97ODtwnoFvSf%2BottJsJkNZSoQtmzgNwoOVMrTPLpoW9cYQOKRJTPczdzjYlJcIQXRPxmQbEtqZ8qgjWsUmdtjZ0hiKKXYiD%2FuBpb8ZNu2zYf%2Baee7wmVrCKtPKgeLm7Mi3Qt5aWsDAiTWKYf5%2Fc4m3XAzb1Z6xA%2B62sB9rLY%2BvArev7clz8gMKcvJ3JQuKUTH9IHvFseBSW36U%2Bolw--4aTlXDkdhGUPjL%2BS--ZY7McmnNLvCnJxHY8IzBbg%3D%3D</pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /records/161</pre>
+          <pre class="request route highlight">GET /tags/39</pre>
 
 
 
@@ -129,18 +129,16 @@ Cookie: _morney_session_id=BSiZgNrsSIUtT4WgjfUVIyIXc6kl%2BEeXkuOazu5iIoPibECYY9Q
             <h3>Response</h3>
               <h4>Headers</h4>
               <pre class="response headers">Content-Type: application/json; charset=utf-8
-Set-Cookie: _morney_session_id=FghEl8BNBSJpJH9SBh3UKhNvhb8BOAZediKOHYBBcYT32ip03EjUOLss%2Br6RNCBan8OK8qVxph3f9QhKm%2FAoz4HnX2c7ayeKT1LBx8K0kSEr%2FTph5hEzPdJ4kIqKlqkI1DUY8Yqe4FACUZsv7ib%2Fr6i59c8ojKZ%2FVPfffcDBcTUd0zEnUGjvJlO4MAqyvcdNTea%2FTsvNoSLp7sXs4V197Qi9FenjGmwsY%2FFUKA0DU6LmhfKHziVIT3H9--aevIOC3zb4ys5upW--8%2BpNs7MxHFTVROiCifEIhA%3D%3D; path=/; HttpOnly</pre>
+Set-Cookie: _morney_session_id=T2alNvET2JvNShk1CdTE4iQFgAKJqDOwkWyWXUZsMQ7VfJsRFH7AqJ3B6%2BlDZOs4LRoLaE8OwTMqCt7d1m4Q6m1QBN%2BNQjJnc5di3pkZwoOvDq43Hye%2FKBuux6EFTXVz2gywMW4HO9QU5x%2Fk%2FQd1BqpURJEMJkAhh9w6WCtpN%2BjlAXxg6Mc5tp8KT0BPNGdM8cd%2FJmgXA7bcFCKJueN0G0bMOvrEDvDlZFH8OeN4K0iZ8EnhS3IWrGEP--gsDU1%2BHERWjapSZc--KKn2p7qvLbYJYSEeg1cFlQ%3D%3D; path=/; HttpOnly</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;resource&quot;: {
-    &quot;id&quot;: 161,
-    &quot;amount&quot;: 10000,
-    &quot;category&quot;: &quot;income&quot;,
-    &quot;notes&quot;: null,
-    &quot;created_at&quot;: &quot;2020-07-13T16:25:23.244Z&quot;,
-    &quot;updated_at&quot;: &quot;2020-07-13T16:25:23.244Z&quot;
+    &quot;id&quot;: 39,
+    &quot;name&quot;: &quot;test&quot;,
+    &quot;created_at&quot;: &quot;2020-07-13T16:25:23.434Z&quot;,
+    &quot;updated_at&quot;: &quot;2020-07-13T16:25:23.434Z&quot;
   }
 }</pre>
       </div>

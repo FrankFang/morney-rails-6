@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Records API</title>
+    <title>Tags API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,41 +106,60 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Records API</h1>
+      <h1>Tags API</h1>
 
       <div class="article">
-        <h2>获取一个记录</h2>
-        <h3>GET /records/:id</h3>
+        <h2>创建标签</h2>
+        <h3>POST /tags</h3>
 
+          <h3>Parameters</h3>
+          <table class="parameters table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="required">
+                    <span class="name">name</span>
+                </td>
+                <td>
+                  <span class="description">标签名</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
 
           <h3>Request</h3>
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
-Cookie: _morney_session_id=BSiZgNrsSIUtT4WgjfUVIyIXc6kl%2BEeXkuOazu5iIoPibECYY9QMq%2FuEA4tJNV6uatislm0JCcHjXmasbhYim6g7SyOjPMMhJm0fq7ARJ3VfZJY1x6P7RwT0u%2BTnQ4mZ3KCFn81EodyYRIkh05BEWaTvXjayrRVRWz1qLoStiHvtILqh3cKm97F7JRc1QQ8gHyNR9LHGnNPGC3phtI2lUM6h2C5xJG7eZqGLQWVUan51OhBE2rvuXhMW--D0T3ui8DUawasq7%2F--3FiHDpAT2rUjaIkxWf1HJQ%3D%3D</pre>
+Cookie: _morney_session_id=nGxvCtJOLR7ixVkU7uwGp0kvFDCSVyq9Mo0DoSAiIOw8ZQdjpjQ88t7sx0F2bnMPbxmNBea4sWuPbF907N9jIGgO4KRBTjleUR3QGSj8FybvZvkTRsDmkTKoGoP0HW6ox9ZSh5KzQSAZsyg4t%2BxxOM1d6x6MjGvVuu2i3Yr7Iwu%2Bfcktlm1hfMpGfuauHLGiJkcExeVsQFTq%2BudW3O4jWisvfPys%2BuSaulyqEI14eSDtnjPs1%2FqDVZN4--jj4Fu4yi06PEfPgL--FkmAnX3%2BaTMKOCnECLGTlg%3D%3D</pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /records/161</pre>
+          <pre class="request route highlight">POST /tags</pre>
 
 
+            <h4>Body</h4>
+            <pre class="request body">{"name":"test"}</pre>
 
 
             <h3>Response</h3>
               <h4>Headers</h4>
               <pre class="response headers">Content-Type: application/json; charset=utf-8
-Set-Cookie: _morney_session_id=FghEl8BNBSJpJH9SBh3UKhNvhb8BOAZediKOHYBBcYT32ip03EjUOLss%2Br6RNCBan8OK8qVxph3f9QhKm%2FAoz4HnX2c7ayeKT1LBx8K0kSEr%2FTph5hEzPdJ4kIqKlqkI1DUY8Yqe4FACUZsv7ib%2Fr6i59c8ojKZ%2FVPfffcDBcTUd0zEnUGjvJlO4MAqyvcdNTea%2FTsvNoSLp7sXs4V197Qi9FenjGmwsY%2FFUKA0DU6LmhfKHziVIT3H9--aevIOC3zb4ys5upW--8%2BpNs7MxHFTVROiCifEIhA%3D%3D; path=/; HttpOnly</pre>
+Set-Cookie: _morney_session_id=Xmzjy9b7UAAtR1Lr%2FR7FnSShk9aYBxKOiiAzvhsl3KBY3y%2BepcqqHt2mXDAoauGajyt9nLLNxoxf2litygvp6Nbi7p4zUq9%2FYVm%2FYOcl9XEW06IVonKEAB5vSas8z2y86ab4rsfS%2Bj0gZfRxtvDUdQwaS5LRSQoraDJCgzUe6YOaOAZWHNKNOEBGJ1W%2F39vm50Vhh4CA1vDuvXLbC06lJUpfhHKj9Dwkx9zaAfx%2Fw3iDoxKN2%2BZysqWH--PMGUMd5Jli%2BcMJoz--4jmwRHaq%2BE%2B%2FVkQE%2F8P0Qg%3D%3D; path=/; HttpOnly</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;resource&quot;: {
-    &quot;id&quot;: 161,
-    &quot;amount&quot;: 10000,
-    &quot;category&quot;: &quot;income&quot;,
-    &quot;notes&quot;: null,
-    &quot;created_at&quot;: &quot;2020-07-13T16:25:23.244Z&quot;,
-    &quot;updated_at&quot;: &quot;2020-07-13T16:25:23.244Z&quot;
+    &quot;id&quot;: 37,
+    &quot;name&quot;: &quot;test&quot;,
+    &quot;created_at&quot;: &quot;2020-07-13T16:25:23.334Z&quot;,
+    &quot;updated_at&quot;: &quot;2020-07-13T16:25:23.334Z&quot;
   }
 }</pre>
       </div>
