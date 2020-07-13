@@ -40,6 +40,6 @@ zh-CN:
         tagging:
           attributes:
             record:
-              blank: 记录不能为空
+              required: 记录不能为空
             tag:
               required: 标签不能为空
