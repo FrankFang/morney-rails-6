@@ -35,4 +35,40 @@ RSpec.describe "Tags", type: :request do
       expect(response.status).to eq 200
     end
   end
+
+  context 'index' do
+    it 'should not get tags before sign in' do
+      get '/tags'
+      expect(response.status).to eq 401
+    end
+    it 'should get tags' do
+      (1..11).to_a.map do |n|
+        Tag.create! name: "test#{n}"
+      end
+      sign_in
+      get '/tags'
+      expect(response.status).to eq 200
+      body = JSON.parse response.body
+      expect(body['resources'].length).to eq 10
+    end
+  end
+
+  context 'show' do
+    it 'should not get a tag before sign in' do
+      tag = Tag.create! name: 'test'
+      get "/tags/#{tag.id}"
+      expect(response.status).to eq 401
+    end
+    it 'should get a tag' do
+      sign_in
+      tag = Tag.create! name: 'test'
+      get "/tags/#{tag.id}"
+      expect(response.status).to eq 200
+    end
+    it 'should not get a tag because not found' do
+      sign_in
+      get "/tags/99999999"
+      expect(response.status).to eq 404
+    end
+  end
 end
