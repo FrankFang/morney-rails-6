@@ -33,3 +33,7 @@ zh-CN:
             password_confirmation:
               blank: 请填写确认密码
               confirmation: 两次密码不匹配
+        tag:
+          attributes:
+            name:
+              blank: 标签名不能为空
