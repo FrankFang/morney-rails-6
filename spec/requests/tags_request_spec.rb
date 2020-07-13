@@ -71,4 +71,20 @@ RSpec.describe "Tags", type: :request do
       expect(response.status).to eq 404
     end
   end
+
+  context 'update' do
+    it 'should not update a tag before sign in' do
+      tag = Tag.create! name: 'test'
+      patch "/tags/#{tag.id}", params: {name: 'new'}
+      expect(response.status).to eq 401
+    end
+    it 'should update a tag' do
+      sign_in
+      tag = Tag.create! name: 'test'
+      patch "/tags/#{tag.id}", params: {name: 'new'}
+      expect(response.status).to eq 200
+      body = JSON.parse response.body
+      expect(body['resource']['name']).to eq 'new'
+    end
+  end
 end

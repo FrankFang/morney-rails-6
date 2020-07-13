@@ -9,6 +9,11 @@ class TagsController < ApplicationController
   def create
     render_resource Tag.create create_params
   end
+  def update
+    tag = Tag.find(params[:id])
+    tag.update create_params
+    render_resource tag
+  end
 
   def destroy
     tag = Tag.find params[:id]
